@@ -1,0 +1,51 @@
+<div class="container reportes">
+    <div class="text-center">
+        <h1>Reportes</h1>
+    </div>
+
+    <form #queryForm="ngForm" (ngSubmit)="onSubmit(queryForm)">
+        
+        <div class="form-group col-md-6">
+            <label class="bday">Ingrese fecha de halazgo: </label>
+            <input type="date" id="fechaHallazgo" min="2018-03-27" max="2019-09-03" name="fechaHallazgo" required="required">
+            <span class="validity"></span>
+        </div>
+
+        <div>
+            <button  type="submit">Upload</button>
+        </div>
+    </form>
+
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+
+            <th scope="col">Nombre</th>
+            <th scope="col">Color</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Lugar</th>
+            <th scope="col">Fecha de Registro</th>
+            <th scope="col">Hora de Registro</th>
+            
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of nombre;let indice=index">
+            <tr>
+
+            <td>{{nombre[indice]}}</td>
+            <td>{{color[indice]}}</td>
+            <td>{{descripcion[indice]}}</td>
+            <td>{{lugar[indice]}}</td>
+            <td>{{fechaRegistro[indice]}}</td>
+            <td>{{horaRegistro[indice]}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+          
+
+    
+</div>
+
+    

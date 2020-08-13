@@ -1,0 +1,45 @@
+<div class="about-content">
+    <div class="container">
+        <div class="product-section">
+            <div class="product-section-top">
+                <h3>Objetos Perdidos</h3>
+
+
+                <p class="texto parrafo2">Recientes de hoy</p>
+                <div class="container">
+                    <div class="row">
+                        <div *ngFor="let objeto of objetosRecientes" class="col-sm-12 col-md-3 mb-3">
+                            <div  class="card">
+                                <img src="{{objeto.imagenO}}" class="card-img-top imagenObjeto" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{objeto.nombre}}</h5>
+                                  <p class="card-text">{{objeto.descripcion}}</p>
+                                  
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                      
+                </div>
+                
+                <p class="texto parrafo2">Todos los objetos</p>
+                <div class="container">
+                    <div class="row">
+                        <div *ngFor="let objeto of objetosTodos" class="col-sm-12 col-md-3 mb-3">
+                            <div  class="card">
+                                <img src="{{objeto.imagenO}}" class="card-img-top imagenObjeto" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{objeto.nombre}}</h5>
+                                  <p class="card-text">{{objeto.descripcion}}</p>
+                                  
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                      
+                </div>
+                  
+        </div>
+    </div>
+</div>
+</div>
