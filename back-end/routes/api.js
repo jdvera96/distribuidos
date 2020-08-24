@@ -58,7 +58,7 @@ function consultarCacheApiReciente(callback){
 //---GET-----------------------------------------
 router.get('/objetos', function(req, res, next) {
     modeloObjeto.getObjeto((err,data)=>{
-        console.log(data);
+        
         res.send(data);
     })
   
@@ -301,7 +301,6 @@ router.post('/acceso',(req,res)=>{
             return err;
         }else{
             console.log('respuesta de la basee')
-            console.log(result);
             res.send(result);
         }
     })
